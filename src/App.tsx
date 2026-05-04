@@ -167,16 +167,35 @@ function App() {
       </div>
 
       <main className="relative overflow-hidden pt-24">
-        <div className="absolute inset-0 -z-10 opacity-90">
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          {/* Particle Canvas Layer */}
           <SparklesCore
             background="transparent"
-            minSize={1.2}
-            maxSize={2.8}
-            particleDensity={180}
+            minSize={2.8}
+            maxSize={5.5}
+            particleDensity={320}
             className="h-full w-full"
-            particleColor="#a855f7"
-            speed={1.5}
+            particleColor="#ffffff"
+            speed={4.5}
           />
+          
+          {/* Animated Gradient Background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 animate-pulse opacity-80" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-indigo-950/20 via-transparent to-purple-950/20 animate-pulse opacity-70" style={{ animationDelay: '1s' }} />
+          
+          {/* Pulsing Glow Sparkles */}
+          <div className="pointer-events-none absolute inset-0">
+            <span className="absolute left-[10%] top-[12%] h-6 w-6 rounded-full bg-white/70 blur-2xl animate-pulse" />
+            <span className="absolute left-[22%] top-[35%] h-8 w-8 rounded-full bg-white/60 blur-3xl animate-pulse" style={{ animationDelay: '0.5s' }} />
+            <span className="absolute left-[35%] top-[18%] h-5 w-5 rounded-full bg-white/75 blur-xl animate-pulse" style={{ animationDelay: '1s' }} />
+            <span className="absolute left-[50%] top-[30%] h-7 w-7 rounded-full bg-white/65 blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
+            <span className="absolute left-[72%] top-[10%] h-6 w-6 rounded-full bg-white/70 blur-2xl animate-pulse" style={{ animationDelay: '0.8s' }} />
+            <span className="absolute left-[80%] top-[44%] h-6 w-6 rounded-full bg-white/60 blur-2xl animate-pulse" />
+            <span className="absolute left-[15%] top-[68%] h-5 w-5 rounded-full bg-white/75 blur-xl animate-pulse" style={{ animationDelay: '1.2s' }} />
+            <span className="absolute left-[42%] top-[58%] h-7 w-7 rounded-full bg-white/55 blur-3xl animate-pulse" style={{ animationDelay: '0.6s' }} />
+            <span className="absolute left-[60%] top-[75%] h-6 w-6 rounded-full bg-white/65 blur-2xl animate-pulse" style={{ animationDelay: '1.8s' }} />
+            <span className="absolute left-[85%] top-[82%] h-8 w-8 rounded-full bg-white/50 blur-3xl animate-pulse" style={{ animationDelay: '1.1s' }} />
+          </div>
         </div>
 
         <section className="relative mx-auto max-w-7xl px-6 pb-16 pt-12 sm:px-8 lg:px-10">

@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useId, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import type { Container, SingleOrMultiple } from "@tsparticles/engine";
+import type { SingleOrMultiple } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 import { cn } from "@/lib/utils";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 type ParticlesProps = {
   id?: string;
@@ -36,27 +36,18 @@ export const SparklesCore = (props: ParticlesProps) => {
       setInit(true);
     });
   }, []);
-  const controls = useAnimation();
-
-  const particlesLoaded = async (container?: Container) => {
-    if (container) {
-      controls.start({
-        opacity: 1,
-        transition: {
-          duration: 1,
-        },
-      });
-    }
-  };
-
   const generatedId = useId();
   return (
-    <motion.div animate={controls} className={cn("opacity-0", className)}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.9 }}
+      className={cn("relative h-full w-full", className)}
+    >
       {init && (
         <Particles
           id={id || generatedId}
-          className={cn("h-full w-full")}
-          particlesLoaded={particlesLoaded}
+          className={cn("absolute inset-0 h-full w-full", className)}
           options={{
             background: {
               color: {
@@ -233,13 +224,13 @@ export const SparklesCore = (props: ParticlesProps) => {
               },
               opacity: {
                 value: {
-                  min: 0.1,
+                  min: 0.6,
                   max: 1,
                 },
                 animation: {
                   count: 0,
                   enable: true,
-                  speed: speed || 4,
+                  speed: speed || 5,
                   decay: 0,
                   delay: 0,
                   sync: false,
@@ -250,11 +241,11 @@ export const SparklesCore = (props: ParticlesProps) => {
               },
               reduceDuplicates: false,
               shadow: {
-                blur: 0,
+                blur: 3,
                 color: {
-                  value: "#000",
+                  value: particleColor || "#ffffff",
                 },
-                enable: false,
+                enable: true,
                 offset: {
                   x: 0,
                   y: 0,
