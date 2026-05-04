@@ -155,7 +155,7 @@ function App() {
             ))}
           </nav>
           <a
-            href="/Resume-LikedIn-Ajit.pdf"
+            href="Resume-LikedIn-Ajit.pdf"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/80 px-4 py-2 text-sm text-slate-100 transition hover:bg-slate-800"
@@ -167,15 +167,15 @@ function App() {
       </div>
 
       <main className="relative overflow-hidden pt-24">
-        <div className="absolute inset-0 -z-10 opacity-70">
+        <div className="absolute inset-0 -z-10 opacity-90">
           <SparklesCore
             background="transparent"
-            minSize={0.6}
-            maxSize={1.4}
-            particleDensity={90}
+            minSize={1.2}
+            maxSize={2.8}
+            particleDensity={180}
             className="h-full w-full"
-            particleColor="#8b5cf6"
-            speed={1}
+            particleColor="#a855f7"
+            speed={1.5}
           />
         </div>
 
@@ -202,7 +202,7 @@ function App() {
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <a
-                  href="/Resume-LikedIn-Ajit.pdf"
+                  href="Resume-LikedIn-Ajit.pdf"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-3xl bg-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/20 transition hover:bg-indigo-400"
