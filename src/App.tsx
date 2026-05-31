@@ -105,9 +105,9 @@ const projects = [
     link: "https://github.com/ajitnayak2911/House_Price_Prediction_Project",
   },
   {
-    title: "Link_behavior_audit_tool",
-    description: "Web link audit tool that scans page links and validates internal vs external behavior.",
-    link: "https://github.com/ajitnayak2911/Link_behavior_audit_tool",
+    title: "v0-web-page-self-qa-app",
+    description: "Web page self-QA application for automated testing and validation using v0 framework.",
+    link: "https://github.com/ajitnayak2911/v0-web-page-self-qa-app",
   },
   {
     title: "MCP",
