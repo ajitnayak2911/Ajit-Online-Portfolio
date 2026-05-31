@@ -80,34 +80,59 @@ const certifications = [
 
 const projects = [
   {
-    title: "ajit-nayak",
-    description: "Java-based repository demonstrating programming fundamentals and core automation structure.",
-    link: "https://github.com/ajitnayak2911/ajit-nayak",
+    title: "Ajit-Online-Portfolio",
+    description: "The live React + TypeScript portfolio site built with Vite, Framer Motion, and GitHub Pages.",
+    link: "https://github.com/ajitnayak2911/Ajit-Online-Portfolio",
   },
   {
-    title: "Flipkart-Automation",
-    description: "Test automation for Flipkart workflows built with Java and Selenium-style tooling.",
-    link: "https://github.com/ajitnayak2911/Flipkart-Automation",
+    title: "BAU_Automation",
+    description: "Python automation for business-as-usual workflows, regression, and QA process efficiency.",
+    link: "https://github.com/ajitnayak2911/BAU_Automation",
   },
   {
-    title: "YouTube-Automation",
-    description: "Java automation scripts for managing YouTube interactions and workflow testing.",
-    link: "https://github.com/ajitnayak2911/YouTube-Automation",
-  },
-  {
-    title: "Webscrapper-Automation",
-    description: "Web scraping automation using Java to collect structured data across domains.",
-    link: "https://github.com/ajitnayak2911/Webscrapper-Automation",
-  },
-  {
-    title: "Ajit-Projects",
-    description: "Assorted project experiments showcasing Python automation and analytics ideas.",
-    link: "https://github.com/ajitnayak2911/Ajit-Projects",
+    title: "PythonProject",
+    description: "Automation and scripting experiments using Python for data engineering and utilities.",
+    link: "https://github.com/ajitnayak2911/PythonProject",
   },
   {
     title: "Ajit",
     description: "Python-driven engineering portfolio repository with practical automation and data tools.",
     link: "https://github.com/ajitnayak2911/Ajit",
+  },
+  {
+    title: "House_Price_Prediction_Project",
+    description: "Machine learning project predicting real estate pricing using Python models.",
+    link: "https://github.com/ajitnayak2911/House_Price_Prediction_Project",
+  },
+  {
+    title: "Link_behavior_audit_tool",
+    description: "Web link audit tool that scans page links and validates internal vs external behavior.",
+    link: "https://github.com/ajitnayak2911/Link_behavior_audit_tool",
+  },
+  {
+    title: "MCP",
+    description: "Python-based Model Context Protocol experimentation and integration utilities.",
+    link: "https://github.com/ajitnayak2911/MCP",
+  },
+  {
+    title: "ajit-nayak",
+    description: "Java repository demonstrating automation fundamentals and core application structure.",
+    link: "https://github.com/ajitnayak2911/ajit-nayak",
+  },
+  {
+    title: "Webscrapper-Automation",
+    description: "Java scraping automation for structured web data extraction across domains.",
+    link: "https://github.com/ajitnayak2911/Webscrapper-Automation",
+  },
+  {
+    title: "YouTube-Automation",
+    description: "Java automation for YouTube interaction workflows and validation.",
+    link: "https://github.com/ajitnayak2911/YouTube-Automation",
+  },
+  {
+    title: "Flipkart-Automation",
+    description: "Java e-commerce automation for Flipkart functional and checkout workflows.",
+    link: "https://github.com/ajitnayak2911/Flipkart-Automation",
   },
 ]
 
@@ -129,6 +154,12 @@ const contactDetails = [
     title: "LinkedIn",
     value: "linkedin.com/in/ajitnayak2911",
     href: "https://www.linkedin.com/in/ajitnayak2911",
+  },
+  {
+    icon: ExternalLink,
+    title: "GitHub",
+    value: "github.com/ajitnayak2911",
+    href: "https://github.com/ajitnayak2911",
   },
   {
     icon: MapPin,
@@ -231,15 +262,15 @@ function App() {
               </p>
               <div className="max-w-2xl space-y-6">
                 <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                  Modern Agile leadership for secure QA and AI-powered automation.
+                  Modern Agile leadership, secure QA, and GitHub automation.
                 </h1>
                 <p className="text-lg leading-8 text-slate-300">
-                  I’m Ajit Nayak — a technology leader with a decade of experience driving Agile delivery,
-                  secure QA practices, and AI-enabled test automation for enterprise teams.
+                  I’m Ajit Nayak — a technology leader building secure delivery, AI-powered test automation, and a growing
+                  GitHub portfolio of public repositories.
                 </p>
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-4 sm:grid-cols-3">
                 <a
                   href="Resume-LikedIn-Ajit.pdf"
                   target="_blank"
@@ -247,6 +278,14 @@ function App() {
                   className="inline-flex items-center justify-center rounded-3xl bg-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/20 transition hover:bg-indigo-400"
                 >
                   Download Resume
+                </a>
+                <a
+                  href="https://github.com/ajitnayak2911"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center rounded-3xl border border-white/10 bg-slate-900/80 px-6 py-3 text-sm font-semibold text-slate-100 transition hover:border-indigo-400/40 hover:bg-slate-900"
+                >
+                  View GitHub
                 </a>
                 <a
                   href="#contact"
@@ -439,9 +478,8 @@ function App() {
         <section id="projects" className="mx-auto max-w-7xl px-6 pb-16 sm:px-8 lg:px-10">
           <div className="space-y-6">
             <div className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 shadow-xl shadow-slate-950/30 backdrop-blur-xl">
-              <p className="text-sm uppercase tracking-[0.3em] text-indigo-300">Projects</p>
-              <h2 className="mt-4 text-3xl font-semibold text-white">GitHub work that supports automation and engineering.
-              </h2>
+              <p className="text-sm uppercase tracking-[0.3em] text-indigo-300">Project repositories</p>
+              <h2 className="mt-4 text-3xl font-semibold text-white">GitHub work across automation, data, and tooling.</h2>
             </div>
             <div className="grid gap-6 lg:grid-cols-2">
               {projects.map((project) => (
