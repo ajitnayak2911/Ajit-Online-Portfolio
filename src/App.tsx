@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import { Download, ExternalLink, Link, Mail, Phone, MapPin, Sparkles } from "lucide-react"
 import { SparklesCore } from "./components/ui/sparkles"
+import { useState, useEffect } from "react"
 import profileImage from "./assets/profile.png"
 
 const navLinks = [
@@ -170,6 +171,20 @@ const contactDetails = [
 ]
 
 function App() {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)")
+    setPrefersReducedMotion(mediaQuery.matches)
+    
+    const handleChange = (e: MediaQueryListEvent) => {
+      setPrefersReducedMotion(e.matches)
+    }
+    
+    mediaQuery.addEventListener("change", handleChange)
+    return () => mediaQuery.removeEventListener("change", handleChange)
+  }, [])
+
   return (
     <div className="min-h-screen overflow-hidden text-slate-100">
       <div className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
@@ -199,54 +214,43 @@ function App() {
 
       <main className="relative overflow-hidden pt-24">
         <div className="absolute inset-0 -z-10 overflow-hidden">
-          {/* Particle Canvas */}
+          {/* Particle Canvas - Optimized */}
           <SparklesCore
             background="transparent"
-            minSize={5}
-            maxSize={10}
-            particleDensity={500}
+            minSize={3}
+            maxSize={8}
+            particleDensity={250}
             className="h-full w-full"
             particleColor="#ffffff"
-            speed={6}
+            speed={3}
           />
           
-          {/* Animated Glow Backgrounds */}
+          {/* Animated Glow - Single optimized background */}
           <motion.div 
             className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"
-            animate={{ opacity: [0.8, 1, 0.8] }}
-            transition={{ duration: 4, repeat: Infinity }}
+            animate={prefersReducedMotion ? {} : { opacity: [0.8, 0.95, 0.8] }}
+            transition={prefersReducedMotion ? {} : { duration: 6, repeat: Infinity }}
+            style={{ willChange: "opacity" }}
           />
           <motion.div 
             className="absolute inset-0 bg-gradient-to-tr from-indigo-950/20 via-transparent to-purple-950/20"
-            animate={{ opacity: [0.5, 0.8, 0.5] }}
-            transition={{ duration: 5, repeat: Infinity, delay: 1 }}
+            animate={prefersReducedMotion ? {} : { opacity: [0.4, 0.6, 0.4] }}
+            transition={prefersReducedMotion ? {} : { duration: 7, repeat: Infinity, delay: 1 }}
+            style={{ willChange: "opacity" }}
           />
           
-          {/* Large Pulsing Glow Spheres */}
-          <motion.div
-            className="absolute top-1/4 left-1/3 w-32 h-32 rounded-full bg-white/10 blur-3xl"
-            animate={{ 
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.6, 0.3]
-            }}
-            transition={{ duration: 6, repeat: Infinity }}
-          />
-          <motion.div
-            className="absolute bottom-1/3 right-1/4 w-40 h-40 rounded-full bg-indigo-400/5 blur-3xl"
-            animate={{ 
-              scale: [1.2, 1, 1.2],
-              opacity: [0.2, 0.5, 0.2]
-            }}
-            transition={{ duration: 7, repeat: Infinity, delay: 1 }}
-          />
-          <motion.div
-            className="absolute top-1/2 right-1/3 w-28 h-28 rounded-full bg-white/15 blur-2xl"
-            animate={{ 
-              scale: [1, 1.15, 1],
-              opacity: [0.4, 0.7, 0.4]
-            }}
-            transition={{ duration: 5.5, repeat: Infinity, delay: 0.5 }}
-          />
+          {/* Single optimized glow sphere */}
+          {!prefersReducedMotion && (
+            <motion.div
+              className="absolute top-1/3 right-1/4 w-40 h-40 rounded-full bg-indigo-400/10 blur-3xl"
+              animate={{ 
+                scale: [1, 1.15, 1],
+                opacity: [0.2, 0.4, 0.2]
+              }}
+              transition={{ duration: 8, repeat: Infinity }}
+              style={{ willChange: "transform, opacity" }}
+            />
+          )}
         </div>
 
         <section className="relative mx-auto max-w-7xl px-6 pb-12 pt-8 sm:px-8 lg:px-10">
@@ -307,6 +311,8 @@ function App() {
                 src={profileImage}
                 alt="Ajit Nayak"
                 className="relative mx-auto h-56 w-56 rounded-[2rem] border border-white/10 object-cover shadow-xl"
+                loading="lazy"
+                decoding="async"
               />
               <div className="mt-6 space-y-3 text-center">
                 <div>

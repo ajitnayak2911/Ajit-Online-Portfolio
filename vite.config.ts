@@ -11,4 +11,20 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: (id: string) => {
+          if (id.includes('node_modules/react') || id.includes('node_modules/framer-motion')) {
+            return 'vendor'
+          }
+          if (id.includes('@tsparticles')) {
+            return 'particles'
+          }
+        },
+      },
+    },
+    sourcemap: false,
+    chunkSizeWarningLimit: 600,
+  },
 })

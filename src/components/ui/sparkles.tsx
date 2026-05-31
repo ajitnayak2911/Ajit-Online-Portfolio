@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useState, memo } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { SingleOrMultiple } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
@@ -17,7 +17,8 @@ type ParticlesProps = {
   particleColor?: string;
   particleDensity?: number;
 };
-export const SparklesCore = (props: ParticlesProps) => {
+
+export const SparklesCore = memo((props: ParticlesProps) => {
   const {
     id,
     className,
@@ -421,4 +422,4 @@ export const SparklesCore = (props: ParticlesProps) => {
       )}
     </motion.div>
   );
-};
+})
