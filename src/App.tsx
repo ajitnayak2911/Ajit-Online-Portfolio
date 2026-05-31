@@ -105,11 +105,6 @@ const projects = [
     link: "https://github.com/ajitnayak2911/House_Price_Prediction_Project",
   },
   {
-    title: "v0-web-page-self-qa-app",
-    description: "Web page self-QA application for automated testing and validation using v0 framework.",
-    link: "https://github.com/ajitnayak2911/v0-web-page-self-qa-app",
-  },
-  {
     title: "MCP",
     description: "Python-based Model Context Protocol experimentation and integration utilities.",
     link: "https://github.com/ajitnayak2911/MCP",
@@ -249,7 +244,7 @@ function App() {
           />
         </div>
 
-        <section className="relative mx-auto max-w-7xl px-6 pb-16 pt-12 sm:px-8 lg:px-10">
+        <section className="relative mx-auto max-w-7xl px-6 pb-12 pt-8 sm:px-8 lg:px-10">
           <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -260,7 +255,7 @@ function App() {
               <p className="inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2 text-sm text-indigo-200">
                 Certified SAFe 6.0 Scrum Master & QA leader
               </p>
-              <div className="max-w-2xl space-y-6">
+              <div className="max-w-2xl space-y-5">
                 <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
                   Modern Agile leadership, secure QA, and GitHub automation.
                 </h1>
@@ -270,7 +265,7 @@ function App() {
                 </p>
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-3">
+              <div className="grid gap-3 sm:grid-cols-3">
                 <a
                   href="Resume-LikedIn-Ajit.pdf"
                   target="_blank"
@@ -308,7 +303,7 @@ function App() {
                 alt="Ajit Nayak"
                 className="relative mx-auto h-56 w-56 rounded-[2rem] border border-white/10 object-cover shadow-xl"
               />
-              <div className="mt-8 space-y-4 text-center">
+              <div className="mt-6 space-y-3 text-center">
                 <div>
                   <p className="text-sm uppercase tracking-[0.28em] text-slate-400">Hyderabad, India</p>
                   <h2 className="mt-3 text-2xl font-semibold text-white">Ajit Nayak</h2>
@@ -316,8 +311,8 @@ function App() {
                 <p className="text-sm leading-6 text-slate-400">
                   Scrum Master | QA & Web Security Expert | AI-driven Test Automation
                 </p>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <div className="rounded-3xl border border-white/10 bg-slate-900/80 px-4 py-4 text-left">
+                <div className="grid gap-2 sm:grid-cols-2">
+                  <div className="rounded-3xl border border-white/10 bg-slate-900/80 px-3 py-3 text-left">
                     <p className="text-sm uppercase tracking-[0.24em] text-slate-500">Top skill</p>
                     <p className="mt-2 text-base font-semibold text-white">AI & Machine Learning</p>
                   </div>
@@ -331,14 +326,14 @@ function App() {
           </div>
         </section>
 
-        <section id="about" className="mx-auto max-w-7xl px-6 pb-16 sm:px-8 lg:px-10">
+        <section id="about" className="mx-auto max-w-7xl px-6 pb-10 pt-4 sm:px-8 lg:px-10">
           <div className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 shadow-xl shadow-slate-950/30 backdrop-blur-xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className="grid gap-8 lg:grid-cols-[0.9fr_0.7fr]"
+              className="grid gap-6 lg:grid-cols-[0.9fr_0.7fr]"
             >
               <div>
                 <p className="text-sm uppercase tracking-[0.3em] text-indigo-300">About</p>
@@ -375,8 +370,8 @@ function App() {
           </div>
         </section>
 
-        <section id="skills" className="mx-auto max-w-7xl px-6 pb-16 sm:px-8 lg:px-10">
-          <div className="grid gap-8 lg:grid-cols-2">
+        <section id="skills" className="mx-auto max-w-7xl px-6 pb-10 pt-4 sm:px-8 lg:px-10">
+          <div className="grid gap-6 lg:grid-cols-2">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -390,7 +385,7 @@ function App() {
                 My work blends enterprise QA and release assurance with modern development tooling,
                 AI-assisted automation, and compliance-first quality processes.
               </p>
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              <div className="mt-6 grid gap-2 sm:grid-cols-2">
                 {skills.map((skill) => (
                   <div key={skill} className="rounded-3xl border border-white/10 bg-slate-900/80 px-5 py-4 text-sm text-slate-200">
                     {skill}
@@ -421,13 +416,13 @@ function App() {
           </div>
         </section>
 
-        <section id="experience" className="mx-auto max-w-7xl px-6 pb-16 sm:px-8 lg:px-10">
+        <section id="experience" className="mx-auto max-w-7xl px-6 pb-10 pt-4 sm:px-8 lg:px-10">
           <div className="space-y-6">
             <div className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 shadow-xl shadow-slate-950/30 backdrop-blur-xl">
               <p className="text-sm uppercase tracking-[0.3em] text-indigo-300">Experience</p>
               <h2 className="mt-4 text-3xl font-semibold text-white">Career journey across QA, security, and agile leadership.</h2>
             </div>
-            <div className="grid gap-6">
+            <div className="grid gap-4">
               {experience.map((item) => (
                 <motion.div
                   key={item.company}
@@ -461,7 +456,7 @@ function App() {
           </div>
         </section>
 
-        <section id="certifications" className="mx-auto max-w-7xl px-6 pb-16 sm:px-8 lg:px-10">
+        <section id="certifications" className="mx-auto max-w-7xl px-6 pb-10 pt-4 sm:px-8 lg:px-10">
           <div className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 shadow-xl shadow-slate-950/30 backdrop-blur-xl">
             <p className="text-sm uppercase tracking-[0.3em] text-indigo-300">Certifications</p>
             <h2 className="mt-4 text-3xl font-semibold text-white">Validated certifications for Agile, design, and quality.</h2>
@@ -475,13 +470,13 @@ function App() {
           </div>
         </section>
 
-        <section id="projects" className="mx-auto max-w-7xl px-6 pb-16 sm:px-8 lg:px-10">
+        <section id="projects" className="mx-auto max-w-7xl px-6 pb-10 pt-4 sm:px-8 lg:px-10">
           <div className="space-y-6">
             <div className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 shadow-xl shadow-slate-950/30 backdrop-blur-xl">
               <p className="text-sm uppercase tracking-[0.3em] text-indigo-300">Project repositories</p>
               <h2 className="mt-4 text-3xl font-semibold text-white">GitHub work across automation, data, and tooling.</h2>
             </div>
-            <div className="grid gap-6 lg:grid-cols-2">
+            <div className="grid gap-5 lg:grid-cols-2">
               {projects.map((project) => (
                 <motion.a
                   key={project.title}
@@ -505,7 +500,7 @@ function App() {
           </div>
         </section>
 
-        <section id="contact" className="mx-auto max-w-7xl px-6 pb-24 sm:px-8 lg:px-10">
+        <section id="contact" className="mx-auto max-w-7xl px-6 pb-16 pt-4 sm:px-8 lg:px-10">
           <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-slate-950/80 to-slate-900/95 p-8 shadow-2xl shadow-slate-950/40 backdrop-blur-xl">
             <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
               <div>
