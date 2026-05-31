@@ -194,8 +194,8 @@ export const SparklesCore = (props: ParticlesProps) => {
                 random: false,
                 size: false,
                 speed: {
-                  min: 0.1,
-                  max: 1,
+                  min: 0.5,
+                  max: 1.5,
                 },
                 spin: {
                   acceleration: 0,
@@ -255,7 +255,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                 close: true,
                 fill: true,
                 options: {},
-                type: "circle",
+                type: ["circle", "star"],
               },
               size: {
                 value: {
@@ -331,8 +331,8 @@ export const SparklesCore = (props: ParticlesProps) => {
                   opacity: 1,
                 },
                 particles: {
-                  enable: false,
-                  frequency: 0.05,
+                  enable: true,
+                  frequency: 0.08,
                   opacity: 1,
                 },
               },
