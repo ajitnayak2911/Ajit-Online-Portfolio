@@ -105,6 +105,11 @@ const projects = [
     link: "https://github.com/ajitnayak2911/House_Price_Prediction_Project",
   },
   {
+    title: "v0-web-page-self-qa-app",
+    description: "Web page self-QA application for automated testing and validation using v0 framework.",
+    link: "https://github.com/ajitnayak2911/v0-web-page-self-qa-app",
+  },
+  {
     title: "MCP",
     description: "Python-based Model Context Protocol experimentation and integration utilities.",
     link: "https://github.com/ajitnayak2911/MCP",
