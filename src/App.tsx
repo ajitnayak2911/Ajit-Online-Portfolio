@@ -217,12 +217,12 @@ function App() {
           {/* Particle Canvas - Optimized */}
           <SparklesCore
             background="transparent"
-            minSize={3}
-            maxSize={8}
-            particleDensity={250}
+            minSize={5}
+            maxSize={10}
+            particleDensity={400}
             className="h-full w-full"
             particleColor="#ffffff"
-            speed={3}
+            speed={4}
           />
           
           {/* Animated Glow - Single optimized background */}
