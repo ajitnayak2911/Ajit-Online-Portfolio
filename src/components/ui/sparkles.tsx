@@ -225,7 +225,7 @@ export const SparklesCore = memo((props: ParticlesProps) => {
               },
               opacity: {
                 value: {
-                  min: 0.6,
+                  min: 0.8,
                   max: 1,
                 },
                 animation: {
@@ -242,7 +242,7 @@ export const SparklesCore = memo((props: ParticlesProps) => {
               },
               reduceDuplicates: false,
               shadow: {
-                blur: 3,
+                blur: 5,
                 color: {
                   value: particleColor || "#ffffff",
                 },
