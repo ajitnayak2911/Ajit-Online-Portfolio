@@ -220,30 +220,30 @@ function App() {
             minSize={5}
             maxSize={10}
             particleDensity={400}
-            className="h-full w-full"
+            className="h-full w-full relative z-10"
             particleColor="#ffffff"
             speed={4}
           />
-          
+
           {/* Animated Glow - Single optimized background */}
-          <motion.div 
-            className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 z-0"
             animate={prefersReducedMotion ? {} : { opacity: [0.8, 0.95, 0.8] }}
             transition={prefersReducedMotion ? {} : { duration: 6, repeat: Infinity }}
             style={{ willChange: "opacity" }}
           />
-          <motion.div 
-            className="absolute inset-0 bg-gradient-to-tr from-indigo-950/20 via-transparent to-purple-950/20"
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-tr from-indigo-950/20 via-transparent to-purple-950/20 z-0"
             animate={prefersReducedMotion ? {} : { opacity: [0.4, 0.6, 0.4] }}
             transition={prefersReducedMotion ? {} : { duration: 7, repeat: Infinity, delay: 1 }}
             style={{ willChange: "opacity" }}
           />
-          
+
           {/* Single optimized glow sphere */}
           {!prefersReducedMotion && (
             <motion.div
-              className="absolute top-1/3 right-1/4 w-40 h-40 rounded-full bg-indigo-400/10 blur-3xl"
-              animate={{ 
+              className="absolute top-1/3 right-1/4 w-40 h-40 rounded-full bg-indigo-400/10 blur-3xl z-0"
+              animate={{
                 scale: [1, 1.15, 1],
                 opacity: [0.2, 0.4, 0.2]
               }}
